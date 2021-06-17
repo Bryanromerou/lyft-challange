@@ -11,15 +11,8 @@ const corsOptions = {
   origin: "*" 
 };
 
-app.get("/test",(req,res)=>{
-  const myString = "iamyourlyftdriver";
-  let newString = ""
-  for(let i =0 ;i<myString.length;i++){
-    if((i+1)%3===0){
-      newString += myString.charAt(i)
-    }
-  }
-  res.send({"hello":newString})
+app.get("/",(req,res)=>{
+  res.send("Hello welcome to homepage")
 })
 
 app.post("/test",(req,res)=>{
